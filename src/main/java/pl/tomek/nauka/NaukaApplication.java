@@ -10,9 +10,16 @@ public class NaukaApplication {
     public static void main(String[] args) {
         SpringApplication.run(NaukaApplication.class, args);
 
+        uruchom();
 
     }
 
+    public static void uruchom() {
+        PrzyjmujeZwracaTyp przyjmujeZwracaTyp = new PrzyjmujeZwracaTyp();
+
+        String tekst = przyjmujeZwracaTyp.drukuj("To jest jakiś tekst");
+
+        System.out.println(tekst);
+    }
 
 }
-
