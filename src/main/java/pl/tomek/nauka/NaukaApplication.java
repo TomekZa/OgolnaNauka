@@ -20,6 +20,10 @@ public class NaukaApplication {
         String tekst = przyjmujeZwracaTyp.drukuj("To jest jakiś tekst");
 
         System.out.println(tekst);
+        
+        String tekst2 = przyjmujeZwracaTyp.drukuj("Dobra wiadomosc");
+        
+        System.out.println(tekst2);
     }
 
 }
