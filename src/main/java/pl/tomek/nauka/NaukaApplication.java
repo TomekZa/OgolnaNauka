@@ -2,6 +2,7 @@ package pl.tomek.nauka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import pl.tomek.nauka.enumy.WybierzZwierze;
 import pl.tomek.nauka.enumy.Zwierzeta;
 import pl.tomek.nauka.formatowanie.Linia;
 import pl.tomek.nauka.metodaFabrykująca.ZwierzeSerwis;
@@ -28,7 +29,7 @@ public class NaukaApplication {
 
         ZwierzeSerwis zwierzeSerwis = new ZwierzeSerwis();
 
-        zwierzeSerwis.utworzZwierze(Zwierzeta.KOT);
+        zwierzeSerwis.utworzZwierze(WybierzZwierze.KOT);
 
     }
 

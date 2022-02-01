@@ -1,27 +1,28 @@
 package pl.tomek.nauka.metodaFabrykująca;
 
-import pl.tomek.nauka.domena.Kot;
+import pl.tomek.nauka.enumy.WybierzZwierze;
 import pl.tomek.nauka.enumy.Zwierzeta;
-import pl.tomek.nauka.interfejsy.Fabryka;
-import pl.tomek.nauka.interfejsy.Znacznik;
+import pl.tomek.nauka.interfejsy.FabrykaZwierząt;
+import pl.tomek.nauka.interfejsy.Organizm;
 
 public class ZwierzeSerwis {
 
-    public void utworzZwierze(Zwierzeta zwierzeta) {
+    public void utworzZwierze(WybierzZwierze wybierzZwierze) {  // Napisać interfejs deklarującą metodę serwisu
 
-        switch (zwierzeta) {
+        switch (wybierzZwierze) {
 
             case KOT:
-                KotProducent kotProducent = new KotProducent();
-                Znacznik kot = kotProducent.utwórz();
+                FabrykaZwierząt fabrykaKotów = new ProducentZwierzat();
+                Organizm kot = fabrykaKotów.utworz(Zwierzeta.KOT);
                 break;
 
             case PIES:
-                PiesProducent piesProducent = new PiesProducent();
-                Znacznik pies = piesProducent.utwórz();
+                FabrykaZwierząt fabrykaPsów = new ProducentZwierzat();
+                Organizm pies = fabrykaPsów.utworz(Zwierzeta.PIES);
                 break;
+
             default:
-                System.out.println("Nie ma takiego zwierzecia");
+                System.out.println("Test z serwisu");
         }
     }
 }
